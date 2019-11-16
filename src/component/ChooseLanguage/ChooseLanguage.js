@@ -19,10 +19,10 @@ class ChooseLanguage extends Component {
               <MyPortfolioHandler />
             :
               <>
-                <Button onClick={() => chooseLanguage('eng')} eng='eng'>
+                <Button onClick={() => chooseLanguage('eng')}>
                   ENG
                 </Button>
-                <Button onClick={() => chooseLanguage('ru')} ru>
+                <Button onClick={() => chooseLanguage('ru')}>
                   RU
                 </Button>
                 <button
