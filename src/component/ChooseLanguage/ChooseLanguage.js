@@ -1,22 +1,40 @@
 import React, {Component} from 'react';
+
 import MyPortfolioHandler from '../MyPortfolio/MyPortfolioHandler';
+import GlobalStyle from "../../theme/globalStyle";
+import { Wrapper, Button } from './ChooseStyled';
+import './ChooseLanguage.css';
 
 class ChooseLanguage extends Component {
 
   render() {
-    const { chooseLanguage, language } = this.props;
+    const { chooseLanguage, changeButton, language, button } = this.props;
+
     return (
-      <div>
-        { language
-          ?
-            <MyPortfolioHandler />
-          :
-            <div>
-              <button onClick={() => chooseLanguage('eng')}>ENG</button>
-              <button onClick={() => chooseLanguage('ru')}>RU</button>
-            </div>
-        }
-      </div>
+      <>
+        <GlobalStyle background={language} />
+        <Wrapper className='Wrapper'>
+          { language
+            ?
+              <MyPortfolioHandler />
+            :
+              <>
+                <Button onClick={() => chooseLanguage('eng')} eng='eng'>
+                  ENG
+                </Button>
+                <Button onClick={() => chooseLanguage('ru')} ru>
+                  RU
+                </Button>
+                <button
+                  onClick={() => changeButton(button.color)}
+                  className={button.color}
+                >
+                  {button.text}
+                </button>
+              </>
+          }
+        </Wrapper>
+      </>
     );
   }
 }

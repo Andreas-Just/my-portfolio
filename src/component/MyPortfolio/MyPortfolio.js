@@ -7,6 +7,7 @@ class MyPortfolio extends Component {
 
   render() {
     const { dataLanguage, chooseLanguage } = this.props;
+
     return (
       <>
         <header>

@@ -24,7 +24,10 @@ const initialState = {
       ],
     },
   },
-
+  button: {
+    text: 'like it',
+    color: 'ButtonStart',
+  },
 };
 
 export function getNextState(state = initialState, action) {
@@ -40,6 +43,34 @@ export function getNextState(state = initialState, action) {
         return {
           ...state,
           language: state.portfolioState.eng
+        };
+      }
+    case ACTION_TYPE.CHANGE_BUTTON:
+      if (action.color === 'ButtonStart') {
+        return {
+          ...state,
+          button: {
+            text: 'liked',
+            color: 'ButtonOne',
+          },
+        };
+      }
+      if (action.color === 'ButtonOne') {
+        return {
+          ...state,
+          button: {
+            text: 'dislike',
+            color: 'ButtonTwo',
+          },
+        };
+      }
+      if (action.color === 'ButtonTwo') {
+        return {
+          ...state,
+          button: {
+            text: 'like it',
+            color: 'Button',
+          },
         };
       }
     default:
