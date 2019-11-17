@@ -8,8 +8,8 @@ class RouteNavigation extends Component {
   render() {
     return (
       <Switch>
-        <Route exact component={HomeHandler} path='/Home' />
-        <Route component={ProjectHandler} path='/Project' />
+        {/*<Route exact path='/Home' component={HomeHandler} />*/}
+        <Route path='/Project' component={ProjectHandler} />
         <Route />
         <Route />
       </Switch>

@@ -3,13 +3,19 @@ import flagRu from './img/icon-flagRu.png';
 import flagEng from './img/icon-flagEng.png';
 
 export const Wrapper = styled.div `
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 250px;
-  transform: translate(-50%, -50%);
+  margin: auto;
+  width: calc(100vw - 16px);
+  height: 100vh;
 `;
-const iconRotation = keyframes`
+export const WrapperButton = styled.div `
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+`;
+export const iconRotation = keyframes`
   0% {
     transform: rotateY(0);
   }
@@ -18,7 +24,7 @@ const iconRotation = keyframes`
     transform: rotateY(180deg);
   }
 `;
-const iconBackRotation = keyframes`
+export const iconBackRotation = keyframes`
   0% {
     transform: rotateY(180deg);
   }
@@ -30,8 +36,8 @@ const iconBackRotation = keyframes`
 export const Button = styled.button `
   position: relative;
   display: block;
-  width: 100%;
-  margin: 70px 0;
+  width: 250px;
+  margin: 5vh 0;
   padding: 32px;
   font-size: 25px;
   font-family: inherit;
@@ -50,6 +56,7 @@ export const Button = styled.button `
     left: 10%;
     width: 64px;
     height: 64px;
+    background-color: transparent;
     background-image: ${props => (props.ru ? `url(${flagRu})` : `url(${flagEng})`)};
     background-repeat: no-repeat;
     background-position: center;
@@ -61,7 +68,6 @@ export const Button = styled.button `
     background-color: coral;
     border: 1px solid tomato;
     ::before {
-      background-color: coral;
       animation: ${iconRotation} 300ms ease-out forwards;
     }
   }

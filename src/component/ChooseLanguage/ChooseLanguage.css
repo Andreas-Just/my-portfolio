@@ -6,10 +6,9 @@
   background-color: green;
 }
 .ButtonTwo {
-  background-color: red;
 }
 .Button {
-  outline: none;
+
 }
 /*.Button::before {*/
 /*  position: absolute;*/
