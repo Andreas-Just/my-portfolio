@@ -1,1 +1,0 @@
-{"version":3,"sources":["ChooseLanguage.css"],"names":[],"mappings":"AAAA,aACE,YAAa,CACb,qBACF,CACA,WACE,sBACF,CACA,WACE,oBACF","file":"main.be7937ad.chunk.css","sourcesContent":[".ButtonStart {\n  display: none;\n  background-color: grey;\n}\n.ButtonOne {\n  background-color: green;\n}\n.ButtonTwo {\n  background-color: red;\n}\n.Button {\n\n}\n"]}
