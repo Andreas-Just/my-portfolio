@@ -1,4 +1,4 @@
-import Home from "./Home";
+import Portfolio from "./Portfolio";
 import { connect } from 'react-redux';
 import { chooseLanguage } from "../../store/actions";
 
@@ -14,4 +14,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Portfolio);
