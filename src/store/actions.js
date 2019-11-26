@@ -1,6 +1,6 @@
 export const ACTION_TYPE = {
   SELECT_LANG: 'select_lang',
-  CHANGE_BUTTON: 'change_button',
+  CHANGE_FLAG: 'change_flag',
 
 };
 
@@ -11,9 +11,8 @@ export function chooseLanguage(lang) {
   };
 }
 
-export function changeButton(color) {
+export function changeFlag() {
   return {
-    type: ACTION_TYPE.CHANGE_BUTTON,
-    color
+    type: ACTION_TYPE.CHANGE_FLAG,
   };
 }

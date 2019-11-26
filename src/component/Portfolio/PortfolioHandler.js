@@ -1,16 +1,18 @@
 import Portfolio from "./Portfolio";
 import { connect } from 'react-redux';
-import { chooseLanguage } from "../../store/actions";
+import { chooseLanguage, changeFlag } from "../../store/actions";
 
 function mapStateToProps(state) {
   return {
     dataLanguage: state.language,
+    flag: state.flag,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    chooseLanguage: lang => dispatch(chooseLanguage(lang))
+    chooseLanguage: lang => dispatch(chooseLanguage(lang)),
+    changeFlag: () => dispatch(changeFlag()),
   };
 }
 

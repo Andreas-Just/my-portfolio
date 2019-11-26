@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import avatar from './img/avatar.jpg';
+import avatar from './img/avatar.svg';
 
 export const Avatar = styled.img.attrs({
     src: `${avatar}`,
@@ -7,6 +7,5 @@ export const Avatar = styled.img.attrs({
   })`
   width: 400px;
   height: 400px;
-  border: 1px solid grey;
   border-radius: 50%;
 `;

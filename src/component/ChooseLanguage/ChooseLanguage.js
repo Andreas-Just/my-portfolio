@@ -8,25 +8,19 @@ import './ChooseLanguage.css';
 class ChooseLanguage extends Component {
 
   render() {
-    const { chooseLanguage, changeButton, language, button } = this.props;
+    const { chooseLanguage, changeFlag, language, flag } = this.props;
 
     return (
       <>
-        <GlobalStyle background={language} />
+        <GlobalStyle background={flag} />
         <Wrapper className='Wrapper'>
           { language
             ?
               <Portfolio />
             :
-              <WrapperButton>
+              <WrapperButton onClick={() => changeFlag()}>
                 <Button onClick={() => chooseLanguage('eng')}>ENG</Button>
                 <Button onClick={() => chooseLanguage('ru')} ru>RU</Button>
-               {/* <button
-                  onClick={() => changeButton(button.color)}
-                  className={button.color}
-                >
-                  {button.text}
-                </button>*/}
               </WrapperButton>
           }
         </Wrapper>

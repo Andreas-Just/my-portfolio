@@ -2,15 +2,16 @@ import { ACTION_TYPE } from "./actions";
 
 const initialState = {
   language: null,
+  flag: false,
   portfolioState: {
     eng: {
       lang: 'eng',
       name: 'Andrew Ivanchenko',
       menuNavigation: [
         {name: 'Home', to: '/home'},
+        {name: 'About me', to: '/about'},
         {name: 'Project', to: '/project'},
         {name: 'Contact', to: '/contact'},
-        {name: 'About', to: '/about'},
       ],
     },
     ru: {
@@ -18,9 +19,9 @@ const initialState = {
       name: 'Андрей Иванченко',
       menuNavigation: [
         {name: 'Главная', to: '/home'},
+        {name: 'Обо мне', to: '/about'},
         {name: 'Проекты', to: '/project'},
         {name: 'Контакты', to: '/contact'},
-        {name: 'Обо мне', to: '/about'},
       ],
     },
   },
@@ -45,34 +46,11 @@ export function getNextState(state = initialState, action) {
           language: state.portfolioState.eng
         };
       }
-    case ACTION_TYPE.CHANGE_BUTTON:
-      if (action.color === 'ButtonStart') {
-        return {
-          ...state,
-          button: {
-            text: 'liked',
-            color: 'ButtonOne',
-          },
-        };
-      }
-      if (action.color === 'ButtonOne') {
-        return {
-          ...state,
-          button: {
-            text: 'dislike',
-            color: 'ButtonTwo',
-          },
-        };
-      }
-      if (action.color === 'ButtonTwo') {
-        return {
-          ...state,
-          button: {
-            text: 'like it',
-            color: 'Button',
-          },
-        };
-      }
+    case ACTION_TYPE.CHANGE_FLAG:
+      return {
+        ...state,
+        flag: !state.flag
+      };
     default:
       return state;
   }

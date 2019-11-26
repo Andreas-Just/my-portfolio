@@ -3,13 +3,13 @@ import React from 'react';
 import RouteNavigation from '../RouteNavigation/RouteNavigation';
 import { Header, Nav, Link, ButtonLang, Main } from './PortfolioStyled';
 
-const Portfolio = ({ dataLanguage, chooseLanguage }) => {
+const Portfolio = ({ dataLanguage, chooseLanguage, changeFlag }) => {
   return (
     <>
       <Header>
         <Nav>
           {dataLanguage.menuNavigation.map((item, index) =>
-            <Link key={index} to={item.to}>{item.name}</Link>
+            <Link key={index} to={item.to} onClick={() => changeFlag()}>{item.name}</Link>
           )}
         </Nav>
         <>
