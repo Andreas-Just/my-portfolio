@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 
 import GlobalStyle from "../../theme/globalStyle";
-import { Wrapper, WrapperButton, Button } from './ChooseStyled';
+import { Wrapper, WrapperButton, Button } from './ChooseLanguageStyled';
 import Portfolio from "../Portfolio/PortfolioHandler";
-import './ChooseLanguage.css';
 
 class ChooseLanguage extends Component {
 
@@ -12,7 +11,7 @@ class ChooseLanguage extends Component {
 
     return (
       <>
-        <GlobalStyle background={flag} />
+        <GlobalStyle background={!flag} />
         <Wrapper className='Wrapper'>
           { language
             ?

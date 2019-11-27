@@ -10,7 +10,9 @@ const GlobalStyle = createGlobalStyle`
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: ${props => (props.background ? 'white' : 'black')};
+    background: ${props => 
+      (props.background ? 'rgb(255,248,236)' : 'rgb(0,0,0)')
+    };
   }
   *,
   *:before,
