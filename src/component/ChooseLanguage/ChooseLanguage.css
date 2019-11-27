@@ -3,11 +3,11 @@
   background-color: grey;
 }
 .ButtonOne {
-  background-color: green;
+  background-color: lightsteelblue;
 }
 .ButtonTwo {
+  color: steelblue;
 }
 .Button {
-  background-color: saddlebrown;
-  text-decoration: none;
+  box-shadow:  10px 10px 20px #111B2A;
 }

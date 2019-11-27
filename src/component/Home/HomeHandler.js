@@ -5,6 +5,7 @@ import { chooseLanguage } from "../../store/actions";
 function mapStateToProps(state) {
   return {
     dataLanguage: state.language,
+    flag: state.flag,
   };
 }
 

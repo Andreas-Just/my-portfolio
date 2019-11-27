@@ -4,7 +4,7 @@ import flagEng from './img/icon-flagEng.png';
 
 export const Wrapper = styled.div `
   margin: auto;
-  width: calc(100vw - 16px);
+  width: 100vw;
   height: 100vh;
 `;
 export const WrapperButton = styled.div `
@@ -46,7 +46,7 @@ export const Button = styled.button `
   text-transform: uppercase;
   background-color: lightsalmon;
   border: 1px solid coral;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
   
   ::before {

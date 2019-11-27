@@ -7,6 +7,8 @@ export const Header = styled.header `
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  background-color: ${props => props.theme.bg};
+  box-shadow: 0 0 20px 3px ${props => props.theme.shadowHeader};
 `;
 export const Nav = styled.nav `
   width: 100%;
@@ -18,15 +20,23 @@ export const NavList = styled.ul `
   width: 100%;
 `;
 export const NavItem = styled.li `
-  
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
 `;
 export const StyledLink = styled(NavLink) `
+  display: block;
+  padding: 25px;
   text-decoration: none;
-  color: white;
-  background-color: blue;
+  color: ${props => props.theme.color};
+  
+  &:hover {
+    box-shadow: 0 0 10px 1px ${props => props.theme.shadowItem};
+  }
 
   &.${(props) => props.activeClassName} {
-    background-color: paleturquoise;
+    color: ${props => props.theme.colorActive};
+    background-color: ${props => props.theme.bgActive};
   }
 `;
 StyledLink.defaultProps = {
@@ -50,4 +60,6 @@ export const Main = styled.main `
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
+  color: ${props => props.theme.color};
 `;

@@ -11,7 +11,7 @@ class ChooseLanguage extends Component {
 
     return (
       <>
-        <GlobalStyle background={!flag} />
+        <GlobalStyle background={flag} />
         <Wrapper className='Wrapper'>
           { language
             ?

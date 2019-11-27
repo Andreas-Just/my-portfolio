@@ -1,12 +1,16 @@
 import React from 'react';
-import { Avatar } from "../Home/HomeStyled";
+import {ThemeProvider} from "styled-components";
 
-const Home = ({ dataLanguage }) => {
+import { Avatar, Name, Specialty } from "../Home/HomeStyled";
+import { themeHome } from "../../theme/themeVariables";
+
+const Home = ({ dataLanguage, flag }) => {
   return (
-    <>
+    <ThemeProvider theme={themeHome}>
       <Avatar />
-      <h1>{ dataLanguage.name }</h1>
-    </>
+      <Name flag={flag}>{ dataLanguage.name }</Name>
+      <Specialty flag={flag}>{ dataLanguage.specialty }</Specialty>
+    </ThemeProvider>
   );
 };
 

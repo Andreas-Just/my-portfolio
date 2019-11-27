@@ -7,6 +7,7 @@ const initialState = {
     eng: {
       lang: 'eng',
       name: 'Andrew Ivanchenko',
+      specialty: 'Front-End Developer',
       menuNavigation: [
         {name: 'Home', to: '/home'},
         {name: 'About me', to: '/about'},
@@ -17,6 +18,7 @@ const initialState = {
     ru: {
       lang: 'ru',
       name: 'Андрей Иванченко',
+      specialty: 'Front-End Разработчик',
       menuNavigation: [
         {name: 'Главная', to: '/home'},
         {name: 'Обо мне', to: '/about'},
@@ -25,14 +27,10 @@ const initialState = {
       ],
     },
   },
-  button: {
-    text: 'like it',
-    color: 'ButtonStart',
-  },
 };
 
 export function getNextState(state = initialState, action) {
-  console.log(state);
+  // console.log(state);
   switch (action.type) {
     case ACTION_TYPE.SELECT_LANG:
       if (action.lang === 'ru') {

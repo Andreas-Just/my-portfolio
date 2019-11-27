@@ -14,10 +14,10 @@ class Canvas extends React.Component {
   canvasRef = React.createRef();
 
   draw = (ctx) => {
-    ctx.fillStyle = !this.props.flag ? 'rgba(255,248,236,0.16)' : 'rgba(0,0,0,0.1)';
+    ctx.fillStyle = this.props.flag ? 'rgba(255,248,236,.16)' : 'rgba(0,0,0,.1)';
     ctx.fillRect(0, 0, this.state.windowInnerWidth, this.state.windowInnerHeight);
 
-    ctx.fillStyle = !this.props.flag ? '#876043' : 'royalblue';
+    ctx.fillStyle = this.props.flag ? '#876043' : 'royalblue';
     ctx.font = FONT_SIZE + "px courier new";
     for(let i = 0; i < drops.length; i++) {
       const text = CHINESE[Math.floor(Math.random()*CHINESE.length)];
