@@ -1,5 +1,5 @@
 # my CV
 
 
- ## [**Preview** ](https://andreas-just.github.io/my-portfolio/#/)
+ ## [**Preview** ](https://andreas-just.github.io/my_CV/#/)
  
