@@ -6,25 +6,53 @@ const initialState = {
   portfolioState: {
     eng: {
       lang: 'eng',
-      name: 'Andrew Ivanchenko',
-      specialty: 'Front-End Developer',
       menuNavigation: [
         {name: 'Home', to: '/home'},
         {name: 'About me', to: '/about'},
         {name: 'Project', to: '/project'},
         {name: 'Contact', to: '/contact'},
       ],
+      home: {
+        name: 'Andrew Ivanchenko',
+        specialty: 'Front-End Developer',
+      },
+      about: {
+        name: 'Andrew Ivanchenko',
+        specialty: 'Front-End Developer',
+      },
+      project: {
+        name: 'Andrew Ivanchenko',
+        specialty: 'Front-End Developer',
+      },
+      contact: {
+        name: 'Andrew Ivanchenko',
+        specialty: 'Front-End Developer',
+      },
     },
     ru: {
       lang: 'ru',
-      name: 'Андрей Иванченко',
-      specialty: 'Front-End Разработчик',
       menuNavigation: [
         {name: 'Главная', to: '/home'},
         {name: 'Обо мне', to: '/about'},
         {name: 'Проекты', to: '/project'},
         {name: 'Контакты', to: '/contact'},
       ],
+      home: {
+        name: 'Андрей Иванченко',
+        specialty: 'Front-End Разработчик',
+      },
+      about: {
+        name: 'Andrew Ivanchenko',
+        specialty: 'Front-End Developer',
+      },
+      project: {
+        name: 'Andrew Ivanchenko',
+        specialty: 'Front-End Developer',
+      },
+      contact: {
+        name: 'Andrew Ivanchenko',
+        specialty: 'Front-End Developer',
+      },
     },
   },
 };

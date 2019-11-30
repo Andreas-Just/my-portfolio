@@ -1,10 +1,10 @@
-import Home from "./Home";
+import About from "./About";
 import { connect } from 'react-redux';
 import { chooseLanguage } from "../../store/actions";
 
 function mapStateToProps(state) {
   return {
-    dataLanguage: state.language.home,
+    dataLanguage: state.language.about,
     flag: state.flag,
   };
 }
@@ -15,4 +15,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(About);
