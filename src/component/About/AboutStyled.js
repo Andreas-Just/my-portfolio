@@ -1,13 +1,5 @@
 import styled from 'styled-components';
 
-export const Avatar = styled.img.attrs({
-    src: ``,
-    alt: 'Photo',
-  })`
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-`;
 export const Name = styled.h1 `
   margin-top: 5px;
   padding: 25px;
@@ -21,4 +13,13 @@ export const Specialty = styled(Name) `
   // padding: 0 0 35px;
   font-size: 32px;
   
+`;
+
+export const TechnicalSkills = styled.img.attrs({
+  src: ``,
+  alt: 'Photo',
+})`
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
 `;
