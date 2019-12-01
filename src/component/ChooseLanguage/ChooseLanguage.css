@@ -6,8 +6,16 @@
   background-color: lightsteelblue;
 }
 .ButtonTwo {
-  color: steelblue;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  width: 80%;
+  overflow: scroll;
 }
 .Button {
-  box-shadow:  10px 10px 20px #111B2A;
+  border: 3px solid ;
+  box-shadow: 10px 10px 20px #111B2A;
 }

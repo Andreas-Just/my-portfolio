@@ -7,7 +7,7 @@ export const Header = styled.header `
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: ${props => props.theme.bg};
+  background-color: ${props => props.theme.bgNav};
   box-shadow: 0 0 20px 3px ${props => props.theme.shadowHeader};
 `;
 export const Nav = styled.nav `
@@ -28,7 +28,7 @@ export const StyledLink = styled(NavLink) `
   display: block;
   padding: 25px;
   text-decoration: none;
-  color: ${props => props.theme.color};
+  color: ${props => props.theme.colorNav};
   
   &:hover {
     box-shadow: 0 0 10px 1px ${props => props.theme.shadowItem};
@@ -60,6 +60,6 @@ export const Main = styled.main `
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
-  color: ${props => props.theme.color};
+  margin-top: 40px;
+  color: ${props => props.theme.colorMain};
 `;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { ThemeProvider } from "styled-components";
 
-import { Avatar, Name, Specialty } from "../Home/HomeStyled";
 import { themeHome } from "../../theme/themeVariables";
+import { Avatar, Name, Specialty } from "./HomeStyled";
 
 const Home = ({ dataLanguage, flag }) => {
   return (

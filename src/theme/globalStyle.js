@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -33,5 +33,17 @@ const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
 `;
-
 export default GlobalStyle;
+
+export const VisuallyHidden = styled.h2 `
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
+  clip-path: inset(100%);
+`;
