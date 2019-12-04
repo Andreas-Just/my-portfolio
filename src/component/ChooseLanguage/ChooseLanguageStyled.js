@@ -6,7 +6,6 @@ export const Wrapper = styled.div `
   margin: auto;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
 `;
 export const WrapperButton = styled.div `
   display: flex;

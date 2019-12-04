@@ -1,21 +1,67 @@
 import React from 'react';
-import { Title, IconHTML, IconCSS, IconJS } from "./AboutStyled";
+import { WrapperIcon, Title, IconHTML, IconCSS, IconSASS, IconBootstrap, IconJS, IconReact, IconRedux, IconGit, IconWebpack, IconSQL, IconPhotoshop } from "./AboutStyled";
 
 export const MakeupSkills = () => {
   return (
     <>
-      <div>
+      <WrapperIcon>
         <Title>HTML</Title>
         <IconHTML></IconHTML>
-      </div>
-      <div>
+      </WrapperIcon>
+      <WrapperIcon>
         <Title>CSS</Title>
         <IconCSS></IconCSS>
-      </div>
-      <div>
-        <Title>Java Script</Title>
+      </WrapperIcon>
+      <WrapperIcon>
+        <Title>SASS</Title>
+        <IconSASS></IconSASS>
+      </WrapperIcon>
+      <WrapperIcon>
+        <Title>Bootstrap</Title>
+        <IconBootstrap></IconBootstrap>
+      </WrapperIcon>
+    </>
+  );
+};
+
+export const ProgrammingSkills = () => {
+  return (
+    <>
+      <WrapperIcon>
+        <Title>JS</Title>
         <IconJS></IconJS>
-      </div>
+      </WrapperIcon>
+      <WrapperIcon>
+        <Title>React</Title>
+        <IconReact></IconReact>
+      </WrapperIcon>
+      <WrapperIcon>
+        <Title>Redux</Title>
+        <IconRedux></IconRedux>
+      </WrapperIcon>
+    </>
+  );
+};
+
+export const OthersSkills = () => {
+  return (
+    <>
+      <WrapperIcon>
+        <Title>Git</Title>
+        <IconGit></IconGit>
+      </WrapperIcon>
+      <WrapperIcon>
+        <Title>Webpack</Title>
+        <IconWebpack></IconWebpack>
+      </WrapperIcon>
+      <WrapperIcon>
+        <Title>SQL</Title>
+        <IconSQL></IconSQL>
+      </WrapperIcon>
+      <WrapperIcon>
+        <Title>Photoshop</Title>
+        <IconPhotoshop></IconPhotoshop>
+      </WrapperIcon>
     </>
   );
 };

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import GlobalStyle from "../../theme/globalStyle";
 import { Wrapper, WrapperButton, Button } from './ChooseLanguageStyled';
-import Portfolio from "../Portfolio/PortfolioHandler";
+import PortfolioHandler from "../Portfolio/PortfolioHandler";
 
 class ChooseLanguage extends Component {
 
@@ -15,7 +15,7 @@ class ChooseLanguage extends Component {
         <Wrapper className='Wrapper'>
           { language
             ?
-              <Portfolio />
+              <PortfolioHandler />
             :
               <WrapperButton onClick={() => changeFlag()}>
                 <Button onClick={() => chooseLanguage('eng')}>ENG</Button>

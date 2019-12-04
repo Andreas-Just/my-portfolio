@@ -8,9 +8,11 @@
 .ButtonTwo {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  flex-grow: 1;
   margin: 0;
   align-items: center;
-  text-align: center;
+  font-weight: bold;
   font-size: 16px;
   width: 80%;
   overflow: scroll;

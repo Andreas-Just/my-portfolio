@@ -2,18 +2,26 @@ import styled from 'styled-components';
 import { VisuallyHidden } from '../../theme/globalStyle';
 import html from './img/HTML.svg';
 import css from './img/CSS.svg';
+import sass from './img/SASS.svg';
+import bootstrap from './img/Bootstrap.svg';
 import js from './img/JavaScript.svg';
+import react from './img/React.svg';
+import redux from './img/Redux.svg';
+import git from './img/Git.svg';
+import webpack from './img/Webpack.svg';
+import sql from './img/SQL.svg';
+import photoshop from './img/Photoshop.svg';
 
 export const H2 = styled(VisuallyHidden) ``;
 export const SoftSkills = styled.section `
-  width: 80%;
-  max-height: 55vh;
+  width: 90%;
+  // max-height: 55vh;
   margin: 0 40px;
   padding: 25px;
   border-radius: 5px;
   font-size: 18px;
   text-align: justify;
-  overflow: auto;
+  // overflow: auto;
   background-color: ${props => props.theme.bgHome};
   box-shadow: 0 0 20px 3px ${props => props.theme.shadowText};
 `;
@@ -32,19 +40,31 @@ export const TechnicalSkills = styled.section `
 `;
 export const SkillsList = styled.ul `
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
 `;
 export const SkillItem = styled.li `
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 30%;
+  flex-wrap: wrap;
   padding: 8px 16px;
   background-color: ${props => props.theme.bgSkills};
-  border-top: 2px solid ${props => props.theme.colorSkills};
-  box-shadow: inset 0 3px 10px 1px ${props => props.theme.shadowSkills};
+  border-bottom: 2px solid ${props => props.theme.colorSkills};
+  box-shadow: inset 0 -1px 10px 1px ${props => props.theme.shadowSkills};
+  &:nth-child(2) { 
+    margin: 15px 30px;
+  }
+`;
+export const WrapperIcon = styled.div `
+  &:nth-child(2n) { 
+    margin: 0 10px;
+  }
+  &:last-child { 
+    margin-right: 0;
+  }
 `;
 export const Title = styled.h3 `
   margin: 0;
@@ -55,15 +75,47 @@ export const Title = styled.h3 `
 export const IconHTML = styled.img.attrs({
   src: `${html}`,
   alt: 'HTML5',
-  width: '80px',
-})``;
-export const IconCSS = styled.img.attrs({
+})`
+  min-width: 70px;
+  height: 92px;
+`;
+export const IconCSS = styled(IconHTML).attrs({
   src: `${css}`,
   alt: 'CSS3',
-  width: '80px',
 })``;
-export const IconJS = styled.img.attrs({
+export const IconSASS = styled(IconHTML).attrs({
+  src: `${sass}`,
+  alt: 'SASS',
+})``;
+export const IconBootstrap = styled(IconHTML).attrs({
+  src: `${bootstrap}`,
+  alt: 'Bootstrap',
+})``;
+export const IconJS = styled(IconHTML).attrs({
   src: `${js}`,
   alt: 'JavaScript',
-  width: '80px',
+})``;
+export const IconReact = styled(IconHTML).attrs({
+  src: `${react}`,
+  alt: 'React',
+})``;
+export const IconRedux = styled(IconHTML).attrs({
+  src: `${redux}`,
+  alt: 'Redux',
+})``;
+export const IconGit = styled(IconHTML).attrs({
+  src: `${git}`,
+  alt: 'Git',
+})``;
+export const IconWebpack = styled(IconHTML).attrs({
+  src: `${webpack}`,
+  alt: 'Webpack',
+})``;
+export const IconSQL = styled(IconHTML).attrs({
+  src: `${sql}`,
+  alt: 'SQL',
+})``;
+export const IconPhotoshop = styled(IconHTML).attrs({
+  src: `${photoshop}`,
+  alt: 'Photoshop',
 })``;

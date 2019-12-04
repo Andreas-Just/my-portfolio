@@ -1,8 +1,14 @@
 import { ACTION_TYPE } from "./actions";
+import { FONT_SIZE } from "../component/Canvas/Canvas";
 
 const initialState = {
   language: null,
   flag: false,
+  canvas: {
+    canvasWidth: window.innerWidth,
+    canvasHeight:  window.innerHeight,
+    columns: window.innerWidth/FONT_SIZE,
+  },
   portfolioState: {
     eng: {
       lang: 'eng',
@@ -82,6 +88,15 @@ export function getNextState(state = initialState, action) {
       return {
         ...state,
         flag: !state.flag
+      };
+      case ACTION_TYPE.CHANGE_SIZE:
+      return {
+        ...state,
+        canvas: {
+          canvasWidth: action.width,
+          canvasHeight:  action.height,
+          columns: action.columns,
+        }
       };
     default:
       return state;

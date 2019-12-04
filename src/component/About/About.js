@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { ThemeProvider } from "styled-components";
 
 import { themeHome, themeSkills } from "../../theme/themeVariables";
 import { SoftSkills, H2, P, TechnicalSkills, SkillsList, SkillItem } from "./AboutStyled";
-import { MakeupSkills } from "./Skills";
+import { MakeupSkills, ProgrammingSkills, OthersSkills } from "./Skills";
+import {FONT_SIZE} from "../Canvas/Canvas";
 
-const About = ({ dataLanguage, flag }) => {
+const About = ({ changeSize, dataLanguage, flag }) => {
+  console.log(document.body.scrollHeight);
+  useEffect(() => {
+    changeSize(window.innerWidth, document.body.scrollHeight, window.innerWidth/FONT_SIZE);
+  });
   return (
     <ThemeProvider theme={themeHome}>
       <SoftSkills flag={flag}>
@@ -20,7 +25,10 @@ const About = ({ dataLanguage, flag }) => {
               <MakeupSkills />
             </SkillItem>
             <SkillItem flag={flag}>
-              <MakeupSkills />
+              <ProgrammingSkills />
+            </SkillItem>
+            <SkillItem flag={flag}>
+              <OthersSkills />
             </SkillItem>
           </SkillsList>
         </ThemeProvider>

@@ -10,14 +10,11 @@ export const Header = styled.header `
   background-color: ${props => props.theme.bgNav};
   box-shadow: 0 0 20px 3px ${props => props.theme.shadowHeader};
 `;
-export const Nav = styled.nav `
-  width: 100%;
-`;
 export const NavList = styled.ul `
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  flex-grow: 1;
 `;
 export const NavItem = styled.li `
   font-size: 16px;
@@ -42,6 +39,12 @@ export const StyledLink = styled(NavLink) `
 StyledLink.defaultProps = {
   activeClassName: 'active',
 };
+export const SettingList = styled(NavList) `
+  flex-grow: 0;
+`;
+export const SettingItem = styled.li `
+  color: ${props => props.theme.colorNav};
+`;
 export const ButtonLang = styled(Button) `
   width: 120px;
   margin: 1vh;
