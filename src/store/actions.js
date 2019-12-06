@@ -19,7 +19,6 @@ export function changeSize(width, height, columns) {
   return {
     type: ACTION_TYPE.CHANGE_SIZE,
     width,
-    height,
-    columns
+    height
   };
 }

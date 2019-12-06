@@ -1,6 +1,6 @@
 import Home from "./Home";
 import { connect } from 'react-redux';
-import { chooseLanguage } from "../../store/actions";
+import {changeSize, chooseLanguage} from "../../store/actions";
 
 function mapStateToProps(state) {
   return {
@@ -11,7 +11,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    chooseLanguage: lang => dispatch(chooseLanguage(lang))
+    chooseLanguage: lang => dispatch(chooseLanguage(lang)),
+    changeSize: (width, height) => dispatch(changeSize(width, height)),
   };
 }
 

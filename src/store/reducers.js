@@ -1,5 +1,4 @@
 import { ACTION_TYPE } from "./actions";
-import { FONT_SIZE } from "../component/Canvas/Canvas";
 
 const initialState = {
   language: null,
@@ -7,7 +6,6 @@ const initialState = {
   canvas: {
     canvasWidth: window.innerWidth,
     canvasHeight:  window.innerHeight,
-    columns: window.innerWidth/FONT_SIZE,
   },
   portfolioState: {
     eng: {
@@ -95,7 +93,6 @@ export function getNextState(state = initialState, action) {
         canvas: {
           canvasWidth: action.width,
           canvasHeight:  action.height,
-          columns: action.columns,
         }
       };
     default:

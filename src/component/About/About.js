@@ -1,15 +1,16 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { ThemeProvider } from "styled-components";
 
 import { themeHome, themeSkills } from "../../theme/themeVariables";
 import { SoftSkills, H2, P, TechnicalSkills, SkillsList, SkillItem } from "./AboutStyled";
 import { MakeupSkills, ProgrammingSkills, OthersSkills } from "./Skills";
-import {FONT_SIZE} from "../Canvas/Canvas";
 
 const About = ({ changeSize, dataLanguage, flag }) => {
-  console.log(document.body.scrollHeight);
   useEffect(() => {
-    changeSize(window.innerWidth, document.body.scrollHeight, window.innerWidth/FONT_SIZE);
+    setTimeout(
+      () => changeSize(window.innerWidth, document.body.scrollHeight),
+      300
+    )
   });
   return (
     <ThemeProvider theme={themeHome}>

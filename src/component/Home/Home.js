@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ThemeProvider } from "styled-components";
 
 import { themeHome } from "../../theme/themeVariables";
 import { Avatar, Name, Specialty } from "./HomeStyled";
 
-const Home = ({ dataLanguage, flag }) => {
+const Home = ({ changeSize, dataLanguage, flag }) => {
+  useEffect(() => {
+    setTimeout(
+      () => changeSize(window.innerWidth, document.body.scrollHeight),
+      300
+    )
+  });
   return (
     <ThemeProvider theme={themeHome}>
       <Avatar />

@@ -12,7 +12,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     chooseLanguage: lang => dispatch(chooseLanguage(lang)),
-    changeSize: (width, height, columns) => dispatch(changeSize(width, height, columns)),
+    changeSize: (width, height) => dispatch(changeSize(width, height)),
   };
 }
 

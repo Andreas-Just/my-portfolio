@@ -1,6 +1,6 @@
 import Canvas from "./Canvas";
 import { connect } from 'react-redux';
-import {changeSize} from "../../store/actions";
+import { changeSize } from "../../store/actions";
 
 function mapStateToProps(state) {
   return {
@@ -11,7 +11,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    changeSize: (width, height, columns) => dispatch(changeSize(width, height, columns)),
+    changeSize: (width, height, columns) => dispatch(changeSize(width, height)),
   };
 }
 
