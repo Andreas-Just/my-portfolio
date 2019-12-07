@@ -1,5 +1,5 @@
-import React from "react";
-import Switch from "@material-ui/core/Switch";
+import React from 'react';
+import Switch from '@material-ui/core/Switch';
 import { withStyles } from '@material-ui/core/styles';
 
 export const Switches = withStyles(theme => ({

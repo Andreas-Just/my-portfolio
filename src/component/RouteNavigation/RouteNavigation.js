@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import HomeHandler from "../Home/HomeHandler";
-import AboutHandler from "../About/AboutHandler";
-import ProjectHandler from "../Project/ProjectHandler";
+import HomeHandler from '../Home/HomeHandler';
+import AboutHandler from '../About/AboutHandler';
+import ProjectHandler from '../Project/ProjectHandler';
 
 const RouteNavigation = () => (
   <Switch>

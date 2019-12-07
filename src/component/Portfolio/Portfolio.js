@@ -29,8 +29,8 @@ const Portfolio = ({ dataLanguage, chooseLanguage, changeFlag, flag }) => {
             </SettingItem>
             <SettingItem>
               {dataLanguage.lang === 'eng'
-                ? <ButtonLang onClick={() => chooseLanguage('ru')}>RU</ButtonLang>
-                : <ButtonLang onClick={() => chooseLanguage('eng')}>ENG</ButtonLang>}
+                ? <ButtonLang onClick={() => chooseLanguage('ru')}>ENG</ButtonLang>
+                : <ButtonLang onClick={() => chooseLanguage('eng')} ru>RU</ButtonLang>}
             </SettingItem>
           </SettingList>
         </Header>

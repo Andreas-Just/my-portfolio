@@ -1,18 +1,14 @@
-import Canvas from "./Canvas";
+import Canvas from './Canvas';
 import { connect } from 'react-redux';
-import { changeSize } from "../../store/actions";
+import { changeSize } from '../../store/actions';
 
-function mapStateToProps(state) {
-  return {
-    flag: state.flag,
-    canvas: state.canvas,
-  };
-}
+const mapStateToProps = (state) => ({
+  flag: state.flag,
+  canvas: state.canvas,
+});
 
-function mapDispatchToProps(dispatch) {
-  return {
-    changeSize: (width, height, columns) => dispatch(changeSize(width, height)),
-  };
-}
+const mapDispatchToProps = (dispatch) => ({
+  changeSize: (width, height) => dispatch(changeSize(width, height)),
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Canvas);

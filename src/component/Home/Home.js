@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from 'styled-components';
 
-import { themeHome } from "../../theme/themeVariables";
-import { Avatar, Name, Specialty } from "./HomeStyled";
+import { themeHome } from '../../theme/themeVariables';
+import { Avatar, Name, Specialty } from './HomeStyled';
 
 const Home = ({ changeSize, dataLanguage, flag }) => {
   useEffect(() => {
-    setTimeout(
-      () => changeSize(window.innerWidth, document.body.scrollHeight),
-      300
+    setTimeout(() =>
+        changeSize(document.documentElement.clientWidth, document.body.scrollHeight),
+      200
     )
   });
   return (

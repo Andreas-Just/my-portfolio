@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from 'styled-components';
 
-import { themeHome, themeSkills } from "../../theme/themeVariables";
-import { SoftSkills, H2, P, TechnicalSkills, SkillsList, SkillItem } from "./AboutStyled";
-import { MakeupSkills, ProgrammingSkills, OthersSkills } from "./Skills";
+import { themeHome, themeSkills } from '../../theme/themeVariables';
+import { SoftSkills, H2, P, TechnicalSkills, SkillsList, SkillItem } from './AboutStyled';
+import { MakeupSkills, ProgrammingSkills, OthersSkills } from './Skills';
 
 const About = ({ changeSize, dataLanguage, flag }) => {
   useEffect(() => {
-    setTimeout(
-      () => changeSize(window.innerWidth, document.body.scrollHeight),
-      300
+    setTimeout(() =>
+        changeSize(document.documentElement.clientWidth, document.body.scrollHeight),
+      200
     )
   });
   return (

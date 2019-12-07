@@ -1,5 +1,5 @@
 import React from 'react';
-import { WrapperIcon, Title, IconHTML, IconCSS, IconSASS, IconBootstrap, IconJS, IconReact, IconRedux, IconGit, IconWebpack, IconSQL, IconPhotoshop } from "./AboutStyled";
+import { WrapperIcon, Title, IconHTML, IconCSS, IconSASS, IconBootstrap, IconJS, IconReact, IconRedux, IconGit, IconWebpack, IconSQL, IconPhotoshop } from './AboutStyled';
 
 export const MakeupSkills = () => {
   return (

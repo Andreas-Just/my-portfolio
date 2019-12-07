@@ -1,17 +1,14 @@
 import Project from "./Project";
 import { connect } from 'react-redux';
-import { } from "../../store/actions";
+import { chooseLanguage, changeSize } from "../../store/actions";
 
-function mapStateToProps(state) {
-  return {
+const mapStateToProps = (state) => ({
+  flag: state.flag,
+});
 
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-
-  };
-}
+const mapDispatchToProps = (dispatch) => ({
+  chooseLanguage: lang => dispatch(chooseLanguage(lang)),
+  changeSize: (width, height) => dispatch(changeSize(width, height)),
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Project);

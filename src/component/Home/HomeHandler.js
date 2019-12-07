@@ -1,19 +1,15 @@
-import Home from "./Home";
+import Home from './Home';
 import { connect } from 'react-redux';
-import {changeSize, chooseLanguage} from "../../store/actions";
+import { chooseLanguage, changeSize } from '../../store/actions';
 
-function mapStateToProps(state) {
-  return {
-    dataLanguage: state.language.home,
-    flag: state.flag,
-  };
-}
+const mapStateToProps = (state) => ({
+  dataLanguage: state.language.home,
+  flag: state.flag,
+});
 
-function mapDispatchToProps(dispatch) {
-  return {
-    chooseLanguage: lang => dispatch(chooseLanguage(lang)),
-    changeSize: (width, height) => dispatch(changeSize(width, height)),
-  };
-}
+const mapDispatchToProps = (dispatch) => ({
+  chooseLanguage: lang => dispatch(chooseLanguage(lang)),
+  changeSize: (width, height) => dispatch(changeSize(width, height)),
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
