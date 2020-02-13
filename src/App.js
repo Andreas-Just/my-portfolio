@@ -1,13 +1,12 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-
-import ChooseLanguageHandler from './component/ChooseLanguage/ChooseLanguageHandler';
-import CanvasHandler from './component/Canvas/CanvasHandler';
-import store from './store/createStore'
+import store from './store';
+import ChooseLanguage from './component/ChooseLanguage';
+import Canvas from './component/Canvas';
 
 export const App = () => (
   <Provider store={store}>
-    <ChooseLanguageHandler />
-    <CanvasHandler />
+    <ChooseLanguage />
+    <Canvas />
   </Provider>
 );

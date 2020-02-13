@@ -1,15 +1,15 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import HomeHandler from '../Home/HomeHandler';
-import AboutHandler from '../About/AboutHandler';
-import ProjectHandler from '../Project/ProjectHandler';
+import Home from '../Home';
+import About from '../About';
+import Project from '../Project';
 
 const RouteNavigation = () => (
   <Switch>
     <Redirect exact from="/" to="/home" />
-    <Route path='/home' component={HomeHandler} />
-    <Route path='/about' component={AboutHandler} />
-    <Route path='/project' component={ProjectHandler} />
+    <Route path='/home' component={Home} />
+    <Route path='/about' component={About} />
+    <Route path='/project' component={Project} />
     <Route />
     <Route />
   </Switch>

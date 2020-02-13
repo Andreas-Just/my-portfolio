@@ -1,10 +1,15 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import { connect } from "react-redux";
+import { changeFlag, chooseLanguage } from "../../store/actions";
 
+import { ThemeProvider } from 'styled-components';
 import { themeNav, themeMain } from '../../theme/themeVariables';
 import RouteNavigation from '../RouteNavigation/RouteNavigation';
 import { Switches } from './Switches';
-import { Header, NavList, NavItem, StyledLink, SettingList, SettingItem, ButtonLang, Main } from './PortfolioStyled';
+import {
+  Header, NavList, NavItem, StyledLink,
+  SettingList, SettingItem, ButtonLang, Main
+} from './PortfolioStyled';
 
 const Portfolio = ({ dataLanguage, chooseLanguage, changeFlag, flag }) => {
   return (
@@ -44,4 +49,14 @@ const Portfolio = ({ dataLanguage, chooseLanguage, changeFlag, flag }) => {
   );
 };
 
-export default Portfolio;
+const mapStateToProps = (state) => ({
+  dataLanguage: state.language,
+  flag: state.flag,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  chooseLanguage: lang => dispatch(chooseLanguage(lang)),
+  changeFlag: () => dispatch(changeFlag()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Portfolio);

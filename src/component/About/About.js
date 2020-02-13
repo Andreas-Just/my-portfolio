@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
-import { ThemeProvider } from 'styled-components';
+import { connect } from "react-redux";
+import { changeSize, chooseLanguage } from "../../store/actions";
 
+import { ThemeProvider } from 'styled-components';
 import { themeHome, themeSkills } from '../../theme/themeVariables';
 import { SoftSkills, H2, P, TechnicalSkills, SkillsList, SkillItem } from './AboutStyled';
 import { MakeupSkills, ProgrammingSkills, OthersSkills } from './Skills';
@@ -14,12 +16,8 @@ const About = ({ changeSize, dataLanguage, flag }) => {
   });
   return (
     <ThemeProvider theme={themeHome}>
-      <SoftSkills flag={flag}>
-        <H2>Soft Skills</H2>
-        { dataLanguage.text.map((item, index) => <P key={index}>{item}</P>) }
-      </SoftSkills>
       <TechnicalSkills>
-        <H2>TechnicalS kills</H2>
+        <H2>Technical skills</H2>
         <ThemeProvider theme={themeSkills}>
           <SkillsList>
             <SkillItem flag={flag}>
@@ -34,8 +32,22 @@ const About = ({ changeSize, dataLanguage, flag }) => {
           </SkillsList>
         </ThemeProvider>
       </TechnicalSkills>
+      <SoftSkills flag={flag}>
+        <H2>Soft skills</H2>
+        { dataLanguage.text.map((item, index) => <P key={index}>{item}</P>) }
+      </SoftSkills>
     </ThemeProvider>
   );
 };
 
-export default About;
+const mapStateToProps = (state) => ({
+  dataLanguage: state.language.about,
+  flag: state.flag,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  chooseLanguage: lang => dispatch(chooseLanguage(lang)),
+  changeSize: (width, height) => dispatch(changeSize(width, height)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(About);

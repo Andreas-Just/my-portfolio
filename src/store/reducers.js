@@ -1,5 +1,4 @@
 import { ACTION_TYPE } from './actions';
-/*
 const portfolioText = {
   eng: {
     lang: 'eng',
@@ -11,7 +10,8 @@ const portfolioText = {
     ],
     home: {
       name: 'Andrew Ivanchenko',
-      specialty: 'Front-End Developer',
+      specialty: 'Designer, Front-end developer',
+      slogan: '"The difficult I make immediately. The impossible takes a little longer."',
     },
     about: {
       text: [
@@ -39,7 +39,8 @@ const portfolioText = {
     ],
     home: {
       name: 'Андрей Иванченко',
-      specialty: 'Front-End Разработчик',
+      specialty: 'Дизайнер, Front-end разработчик',
+      slogan: '"Трудные задачи выполняю немедленно, невозможные — чуть погодя."',
     },
     about: {
       text: [
@@ -58,10 +59,9 @@ const portfolioText = {
     },
   },
 };
-*/
 
 const initialState = {
-  dataCV: null,
+  dataCV: portfolioText,
   language: null,
   flag: false,
   canvas: {
@@ -71,13 +71,13 @@ const initialState = {
 };
 
 export function getNextState(state = initialState, action) {
-  // console.log(state);
+  // console.log(action, state);
   switch (action.type) {
-    case ACTION_TYPE.LOAD_DATA:
+    /*case ACTION_TYPE.LOAD_DATA:
       return {
         ...state,
         dataCV: action.data
-      };
+      };*/
     case ACTION_TYPE.SELECT_LANG:
       if (action.lang === 'ru') {
         return {

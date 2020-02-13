@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { VisuallyHidden } from '../../theme/globalStyle';
 import html from './img/HTML.svg';
 import css from './img/CSS.svg';
 import sass from './img/SASS.svg';
@@ -12,35 +11,19 @@ import webpack from './img/Webpack.svg';
 import sql from './img/SQL.svg';
 import photoshop from './img/Photoshop.svg';
 
-export const H2 = styled(VisuallyHidden) ``;
-export const SoftSkills = styled.section `
-  width: 90%;
-  // max-height: 55vh;
-  margin: 0 40px;
-  padding: 25px;
-  border-radius: 5px;
-  font-size: 18px;
-  text-align: justify;
-  // overflow: auto;
-  background-color: ${props => props.theme.bgHome};
-  box-shadow: 0 0 20px 3px ${props => props.theme.shadowText};
-`;
-export const P = styled.p `
+export const H2 = styled.h2 `
   margin: 0;
-  margin-top: 10px;
-  text-indent: 30px;
-    
-  &:first-of-type {
-    margin-top: 0;
-  }
+  margin-bottom: 1vw;
+  font-size: 2.5vw;
+  text-align: center;
 `;
 export const TechnicalSkills = styled.section `
-  width: 90%;
-  margin-top: 25px;
+  width: 85vw;
+  margin-bottom: 3vw;
 `;
 export const SkillsList = styled.ul `
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
@@ -50,17 +33,17 @@ export const SkillItem = styled.li `
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  padding: 8px 16px;
+  padding: .8vw 1.2vw;
   background-color: ${props => props.theme.bgSkills};
   border-bottom: 2px solid ${props => props.theme.colorSkills};
   box-shadow: inset 0 -1px 10px 1px ${props => props.theme.shadowSkills};
   &:nth-child(2) { 
-    margin: 15px 30px;
+    margin: 0 1.2vw;
   }
 `;
 export const WrapperIcon = styled.div `
   &:nth-child(2n) { 
-    margin: 0 10px;
+    margin: 0 1vw;
   }
   &:last-child { 
     margin-right: 0;
@@ -68,16 +51,15 @@ export const WrapperIcon = styled.div `
 `;
 export const Title = styled.h3 `
   margin: 0;
-  margin-bottom: 5px;
-  font-size: 15px;
+  margin-bottom: .5vw;
+  font-size: 1vw;
   text-align: center;
 `;
 export const IconHTML = styled.img.attrs({
   src: `${html}`,
   alt: 'HTML5',
 })`
-  min-width: 70px;
-  height: 92px;
+  height: 6vw;
 `;
 export const IconCSS = styled(IconHTML).attrs({
   src: `${css}`,
@@ -119,3 +101,22 @@ export const IconPhotoshop = styled(IconHTML).attrs({
   src: `${photoshop}`,
   alt: 'Photoshop',
 })``;
+export const SoftSkills = styled.section `
+  width: 85vw;
+  padding: 2.5vw;
+  padding-top: 1vw;
+  border-radius: 5px;
+  font-size: 1.35vw;
+  text-align: justify;
+  background-color: ${props => props.theme.bgHome};
+  box-shadow: 0 0 20px 3px ${props => props.theme.shadowText};
+`;
+export const P = styled.p `
+  margin: 0;
+  margin-top: 1vw;
+  text-indent: 3.5vw;
+    
+  &:first-of-type {
+    margin-top: 0;
+  }
+`;

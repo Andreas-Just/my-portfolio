@@ -17,7 +17,7 @@ export const NavList = styled.ul `
   flex-grow: 1;
 `;
 export const NavItem = styled.li `
-  font-size: 16px;
+  font-size: 1.3vw;
   font-weight: bold;
   text-transform: uppercase;
 `;
@@ -41,13 +41,17 @@ StyledLink.defaultProps = {
 };
 export const SettingList = styled(NavList) `
   flex-grow: 0;
+  margin: 0 3vw;
 `;
 export const SettingItem = styled.li `
   color: ${props => props.theme.colorNav};
+  &:last-child {
+    margin-left: 5vw;
+  }
 `;
 export const ButtonLang = styled(Button) `
   width: 120px;
-  margin: 1vh;
+  margin: 0;
   padding: 12px;
   font-size: 16px;
   
@@ -62,7 +66,8 @@ export const ButtonLang = styled(Button) `
 export const Main = styled.main `
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  margin-top: 40px;
+  margin: 3vw;
   color: ${props => props.theme.colorMain};
 `;
