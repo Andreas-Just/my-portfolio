@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { Button } from '../ChooseLanguage/ChooseLanguageStyled';
 
-export const Header = styled.header `
+export const WrapperHeader = styled.header `
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,12 +62,4 @@ export const ButtonLang = styled(Button) `
     height: 30px;
     background-size: 80%;
   }
-`;
-export const Main = styled.main `
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  margin: 3vw;
-  color: ${props => props.theme.colorMain};
 `;

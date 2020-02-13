@@ -19,7 +19,7 @@ export const H2 = styled.h2 `
 `;
 export const TechnicalSkills = styled.section `
   width: 85vw;
-  margin-bottom: 3vw;
+  margin: 25px 25px 0;
 `;
 export const SkillsList = styled.ul `
   display: flex;
@@ -103,6 +103,7 @@ export const IconPhotoshop = styled(IconHTML).attrs({
 })``;
 export const SoftSkills = styled.section `
   width: 85vw;
+  margin: 40px 25px;
   padding: 2.5vw;
   padding-top: 1vw;
   border-radius: 5px;

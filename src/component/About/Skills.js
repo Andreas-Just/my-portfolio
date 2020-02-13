@@ -10,19 +10,19 @@ export const MakeupSkills = () => {
     <>
       <WrapperIcon>
         <Title>HTML</Title>
-        <IconHTML></IconHTML>
+        <IconHTML />
       </WrapperIcon>
       <WrapperIcon>
         <Title>CSS</Title>
-        <IconCSS></IconCSS>
+        <IconCSS />
       </WrapperIcon>
       <WrapperIcon>
         <Title>SASS</Title>
-        <IconSASS></IconSASS>
+        <IconSASS />
       </WrapperIcon>
       <WrapperIcon>
         <Title>Bootstrap</Title>
-        <IconBootstrap></IconBootstrap>
+        <IconBootstrap />
       </WrapperIcon>
     </>
   );
@@ -33,15 +33,15 @@ export const ProgrammingSkills = () => {
     <>
       <WrapperIcon>
         <Title>JS</Title>
-        <IconJS></IconJS>
+        <IconJS />
       </WrapperIcon>
       <WrapperIcon>
         <Title>React</Title>
-        <IconReact></IconReact>
+        <IconReact />
       </WrapperIcon>
       <WrapperIcon>
         <Title>Redux</Title>
-        <IconRedux></IconRedux>
+        <IconRedux />
       </WrapperIcon>
     </>
   );
@@ -52,19 +52,19 @@ export const OthersSkills = () => {
     <>
       <WrapperIcon>
         <Title>Git</Title>
-        <IconGit></IconGit>
+        <IconGit />
       </WrapperIcon>
       <WrapperIcon>
         <Title>Webpack</Title>
-        <IconWebpack></IconWebpack>
+        <IconWebpack />
       </WrapperIcon>
       <WrapperIcon>
         <Title>SQL</Title>
-        <IconSQL></IconSQL>
+        <IconSQL />
       </WrapperIcon>
       <WrapperIcon>
         <Title>Photoshop</Title>
-        <IconPhotoshop></IconPhotoshop>
+        <IconPhotoshop />
       </WrapperIcon>
     </>
   );

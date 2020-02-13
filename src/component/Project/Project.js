@@ -1,16 +1,29 @@
-import React, {Component} from 'react';
+import React, { useMemo } from 'react';
 import { connect } from "react-redux";
 import { changeSize, chooseLanguage } from "../../store/actions";
+import { ThemeProvider } from "styled-components";
+import { themeNav } from "../../theme/themeVariables";
+import {ProjectContent, SideBar, WrapperProject} from "./ProjectStyled";
 
-class Project extends Component {
-  render() {
-    return (
-      <div>
-        Project
-      </div>
-    );
-  }
-}
+const Project = ({ changeSize, flag }) => {
+  useMemo(
+    () => setTimeout(
+      () => changeSize(document.documentElement.clientWidth, document.body.scrollHeight),
+      50
+    ),
+    [changeSize]
+  );
+  return (
+    <ThemeProvider theme={themeNav}>
+      <WrapperProject>
+        <SideBar flag={flag} />
+        <ProjectContent>
+
+        </ProjectContent>
+      </WrapperProject>
+    </ThemeProvider>
+  );
+};
 
 const mapStateToProps = (state) => ({
   flag: state.flag,

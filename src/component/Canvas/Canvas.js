@@ -34,7 +34,7 @@ class Canvas extends React.Component {
   onChangeColumns = () => {
     const { changeSize, canvas } = this.props;
 
-    changeSize(window.innerWidth, document.body.scrollHeight);
+    changeSize(document.body.clientWidth, document.body.scrollHeight);
     this.setState({
       columns: canvas.canvasWidth/FONT_SIZE,
     });

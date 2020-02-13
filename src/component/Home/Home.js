@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useMemo } from 'react';
 import { connect } from "react-redux";
 import { changeSize, chooseLanguage } from "../../store/actions";
 import { ThemeProvider } from 'styled-components';
@@ -7,12 +7,13 @@ import { Name, Slogan, } from './HomeStyled';
 import { AvatarLight, AvatarDark } from './Avatar';
 
 const Home = ({ changeSize, dataLanguage, flag }) => {
-  useEffect(() => {
-    setTimeout(() =>
-        changeSize(document.documentElement.clientWidth, document.body.scrollHeight),
-      200
-    )
-  });
+  useMemo(
+    () => setTimeout(
+      () => changeSize(document.documentElement.clientWidth, document.body.scrollHeight),
+      50
+    ),
+    [changeSize]
+  );
   return (
     <ThemeProvider theme={themeHome}>
       <Name flag={flag}>{dataLanguage.name} — {dataLanguage.specialty}</Name>

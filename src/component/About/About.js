@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useMemo } from 'react';
 import { connect } from "react-redux";
 import { changeSize, chooseLanguage } from "../../store/actions";
 
@@ -8,12 +8,13 @@ import { SoftSkills, H2, P, TechnicalSkills, SkillsList, SkillItem } from './Abo
 import { MakeupSkills, ProgrammingSkills, OthersSkills } from './Skills';
 
 const About = ({ changeSize, dataLanguage, flag }) => {
-  useEffect(() => {
-    setTimeout(() =>
-        changeSize(document.documentElement.clientWidth, document.body.scrollHeight),
-      200
-    )
-  });
+  useMemo(
+    () => setTimeout(
+      () => changeSize(document.documentElement.clientWidth, document.body.scrollHeight),
+      50
+    ),
+    [changeSize]
+  );
   return (
     <ThemeProvider theme={themeHome}>
       <TechnicalSkills>
